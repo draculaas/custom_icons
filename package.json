@@ -3,6 +3,16 @@
   "version": "1.0.1",
   "description": "Custom icons",
   "main": "index.js",
+  "sideEffects": false,
+  "module": "./esm/index.js",
+  "scripts": {
+    "build:copy-files": "shx cp README.md dist/README.md",
+    "build:package-json": "shx cp package.json dist/package.json & node ./scripts/build-package-json.js",
+    "build:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel ./src --out-dir ./dist --ignore **.test.js,**/__tests__/**,**/e2e.js,**/template-component/**,**/test/**",
+    "build:esm": "cross-env NODE_ENV=production BABEL_ENV=esm babel ./src --out-dir ./dist/esm --ignore **.test.js,**/__tests__/**,**/e2e.js,**/template-component/**,**/test/**",
+    "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel ./src --out-dir ./dist/es --ignore **.test.js,**/__tests__/**,**/e2e.js,**/template-component/**,**/test/**",
+    "build": "npm run build:cjs && npm run build:esm && npm run build:es && npm run build:copy-files && npm build:copy-flow-files && npm run build:copy-ts-files && npm run build:package-json"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/denisschmidt/custom_icons.git"
@@ -12,5 +22,19 @@
   "bugs": {
     "url": "https://github.com/denisschmidt/custom_icons/issues"
   },
-  "homepage": "https://github.com/denisschmidt/custom_icons#readme"
+  "homepage": "https://github.com/denisschmidt/custom_icons#readme",
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/parser": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-export-default-from": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "babel-plugin-transform-styletron-display-name": "^1.1.4",
+    "core-js": "^3.6.4",
+    "cross-env": "^7.0.0",
+    "shx": "^0.3.2"
+  }
 }
