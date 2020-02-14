@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { KIND } from '../../button/constants/buttonConstants';
+import { KIND } from '../constants';
 
 const getStyleForKind = ({ theme, kind }) => {
   switch (kind) {
