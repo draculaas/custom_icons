@@ -1,6 +1,5 @@
 import * as React from "react";
 
-import omitDollarPrefixedKeys from "./omit-dollar-prefixed-keys.js";
 import Icon from "./icon.js";
 import { ThemeContext } from "../styles/theme-provider.js";
 
