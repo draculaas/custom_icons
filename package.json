@@ -11,7 +11,7 @@
     "build:cjs": "cross-env NODE_ENV=production BABEL_ENV=cjs babel ./src --out-dir ./dist --ignore **.test.js,**/__tests__/**,**/e2e.js,**/template-component/**,**/test/**",
     "build:esm": "cross-env NODE_ENV=production BABEL_ENV=esm babel ./src --out-dir ./dist/esm --ignore **.test.js,**/__tests__/**,**/e2e.js,**/template-component/**,**/test/**",
     "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel ./src --out-dir ./dist/es --ignore **.test.js,**/__tests__/**,**/e2e.js,**/template-component/**,**/test/**",
-    "build": "npm run build:cjs && npm run build:esm && npm run build:es && npm run build:copy-files && npm build:copy-flow-files && npm run build:copy-ts-files && npm run build:package-json"
+    "build": "npm run build:cjs && npm run build:esm && npm run build:es && npm run build:copy-files && npm run build:package-json"
   },
   "repository": {
     "type": "git",
