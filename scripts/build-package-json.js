@@ -19,13 +19,9 @@ async function buildPackageJsonFiles() {
         module: path.join('../esm', file, 'index.js'),
       };
 
-      fs.writeFileSync(
-        path.join(distPath, file, 'package.json'),
-        JSON.stringify(data, null, 2),
-        err => {
-          if (err) throw err;
-        },
-      );
+      fs.writeFileSync(path.join(distPath, file, 'package.json'), JSON.stringify(data, null, 2), err => {
+        if (err) throw err;
+      });
     }
   }
 }

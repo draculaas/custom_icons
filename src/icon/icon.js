@@ -1,22 +1,19 @@
-
 import * as React from 'react';
-import {getOverrides} from '../helpers/overrides.js';
-import {Svg as StyledSvg} from './styled-components.js';
+import PropTypes from 'prop-types';
 
-export default function Icon(props) {
-  const {children, title, overrides = {}, size, color, ...restProps} = props;
+import StyledSvg from './styled-svg';
+import { KIND } from '../constants';
 
-  const sharedProps = {
-    $size: size,
-    $color: color,
-  };
+const propTypes = {
+  title: PropTypes.string,
+  kind: PropTypes.oneOf([KIND.primary, KIND.tertiary, KIND.minimal, KIND.fourth, KIND.third, KIND.secondary, KIND.none]),
+};
 
-  const [Svg, overrideProps] = getOverrides(overrides.Svg, StyledSvg);
+const Icon = ({ children, title, ...restProps }) => (
+  <StyledSvg {...restProps}>
+    {title ? <title>{title}</title> : null}
+    {children}
+  </StyledSvg>
+);
 
-  return (
-    <Svg data-baseweb="icon" {...restProps} {...sharedProps} {...overrideProps}>
-      {title ? <title>{title}</title> : null}
-      {children}
-    </Svg>
-  );
-}
+export default Icon;

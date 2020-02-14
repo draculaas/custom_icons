@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {isValidElementType} from 'react-is';
+import { isValidElementType } from 'react-is';
 import deepMerge from '../utils/deep-merge.js';
 
 export function getOverride(override) {
@@ -8,7 +8,7 @@ export function getOverride(override) {
   }
 
   if (override && typeof override === 'object') {
-    return (override).component;
+    return override.component;
   }
 
   // null/undefined
@@ -25,9 +25,7 @@ export function getOverrideProps(override) {
   return {};
 }
 
-export function toObjectOverride(
-  override,
-) {
+export function toObjectOverride(override) {
   if (isValidElementType(override)) {
     return {
       component: override,
@@ -37,20 +35,13 @@ export function toObjectOverride(
   return override || {};
 }
 
-export function getOverrides(
-  override,
-  defaultComponent,
-) {
+export function getOverrides(override, defaultComponent) {
   const Component = getOverride(override) || defaultComponent;
 
-  if (
-    override &&
-    typeof override === 'object' &&
-    typeof override.props === 'function'
-  ) {
+  if (override && typeof override === 'object' && typeof override.props === 'function') {
     const DynamicOverride = React.forwardRef((props, ref) => {
       const mappedProps = override.props(props);
-      const nextProps = getOverrideProps({...override, props: mappedProps});
+      const nextProps = getOverrideProps({ ...override, props: mappedProps });
       return <Component ref={ref} {...nextProps} />;
     });
     DynamicOverride.displayName = Component.displayName;
@@ -61,26 +52,17 @@ export function getOverrides(
   return [Component, props];
 }
 
-export function mergeOverrides(
-  target,
-  source,
-) {
-  const allIdentifiers = Object.keys({...target, ...source});
+export function mergeOverrides(target, source) {
+  const allIdentifiers = Object.keys({ ...target, ...source });
   return allIdentifiers.reduce((acc, name) => {
-    acc[name] = mergeOverride(
-      toObjectOverride(target[name]),
-      toObjectOverride(source[name]),
-    );
+    acc[name] = mergeOverride(toObjectOverride(target[name]), toObjectOverride(source[name]));
     return acc;
   }, {});
 }
 
-export function mergeOverride(
-  target,
-  source,
-) {
+export function mergeOverride(target, source) {
   // Shallow merge should handle `component`
-  const merged = {...target, ...source};
+  const merged = { ...target, ...source };
   if (target.props && source.props) {
     merged.props = mergeConfigurationOverrides(target.props, source.props);
   }
@@ -90,11 +72,7 @@ export function mergeOverride(
   return merged;
 }
 
-
-export function mergeConfigurationOverrides(
-  target,
-  source,
-) {
+export function mergeConfigurationOverrides(target, source) {
   // Simple case of both objects
   if (typeof target === 'object' && typeof source === 'object') {
     return deepMerge({}, target, source);
@@ -102,10 +80,6 @@ export function mergeConfigurationOverrides(
 
   // At least one is a function, return a new composite function
   return (...args) => {
-    return deepMerge(
-      {},
-      typeof target === 'function' ? target(...args) : target,
-      typeof source === 'function' ? source(...args) : source,
-    );
+    return deepMerge({}, typeof target === 'function' ? target(...args) : target, typeof source === 'function' ? source(...args) : source);
   };
 }
