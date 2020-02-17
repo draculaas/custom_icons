@@ -22,3 +22,9 @@ export const WIDTH_SIZE = {
   wide: '100%',
   auto: 'auto',
 };
+
+export const ICON_SIZES = {
+  small: '24px',
+  medium: '32px',
+  large: '42px',
+};
