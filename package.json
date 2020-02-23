@@ -12,7 +12,9 @@
     "build:esm": "cross-env NODE_ENV=production BABEL_ENV=esm babel ./src --out-dir ./dist/esm --ignore **.test.js,**/__tests__/**,**/e2e.js,**/template-component/**,**/test/**",
     "build:es": "cross-env NODE_ENV=production BABEL_ENV=es babel ./src --out-dir ./dist/es --ignore **.test.js,**/__tests__/**,**/e2e.js,**/template-component/**,**/test/**",
     "build": "npm run build:cjs && npm run build:esm && npm run build:es && npm run build:copy-files && npm run build:package-json",
-    "prettier": "prettier --write \"**/*.js\""
+    "prettier": "prettier --write \"**/*.js\"",
+    "storybook": "start-storybook -p 6006 -c storybook",
+    "build-storybook": "build-storybook -c storybook -o public/legacy && build-storybook -c storybook"
   },
   "repository": {
     "type": "git",
@@ -39,6 +41,14 @@
     "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
     "shx": "^0.3.2",
+    "storybook-addon-rtl": "^0.2.2",
     "styled-components": "^5.0.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^5.3.13",
+    "@storybook/addon-links": "^5.3.13",
+    "@storybook/addons": "^5.3.13",
+    "@storybook/react": "^5.3.13",
+    "babel-loader": "^8.0.6"
   }
 }
