@@ -7,7 +7,6 @@ dist
 stats.html
 storybook-static
 coverage
-/e2e/dist/index.js
 .vscode
 .idea
 *.sublime-project
@@ -16,12 +15,7 @@ coverage
 .flow.log
 .flow.log.old
 reports
-vrt/latest
-vrt/diff
 .cache
-documentation-site/.next
-documentation-site/posts.js
-documentation-site/cheat-sheet.js
 public
 versions.json
 __artifacts__
