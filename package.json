@@ -14,7 +14,8 @@
     "build": "npm run build:cjs && npm run build:esm && npm run build:es && npm run build:copy-files && npm run build:package-json",
     "prettier": "prettier --write \"**/*.js\"",
     "storybook": "start-storybook -p 6006 -c storybook",
-    "build-storybook": "build-storybook -c storybook -o public/legacy && build-storybook -c storybook"
+    "build-storybook": "build-storybook -c storybook -o public/legacy && build-storybook -c storybook",
+    "icon:generate": "node ./src/icon/build-icons.js"
   },
   "repository": {
     "type": "git",
@@ -42,7 +43,8 @@
     "prop-types": "^15.7.2",
     "shx": "^0.3.2",
     "storybook-addon-rtl": "^0.2.2",
-    "styled-components": "^5.0.1"
+    "styled-components": "^5.0.1",
+    "yargs": "^15.3.1"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.3.13",

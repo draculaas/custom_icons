@@ -1,0 +1,31 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import Icon from '../icon';
+import { ThemeContext } from '../../styles/theme-provider';
+import { ICON_SIZES } from '../../constants';
+
+const propTypes = {
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  kind: PropTypes.string,
+};
+
+const defaultProps = {
+  size: 'medium',
+};
+
+const %%ICON_NAME%% = ({ size, ...restProps }) => {
+  return (
+    <ThemeContext.Consumer>
+      {theme => (
+        <Icon %%ICON_PROPS%% width={ICON_SIZES[size]} height={ICON_SIZES[size]} theme={theme} {...restProps}>
+          %%ICON_PATH%%
+        </Icon>
+      )}
+    </ThemeContext.Consumer>
+  );
+}
+
+%%ICON_NAME%%.propTypes = propTypes;
+%%ICON_NAME%%.defaultProps = defaultProps;
+
+export default %%ICON_NAME%%;
