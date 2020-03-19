@@ -1,7 +1,7 @@
 import React from 'react';
-import theme from '../theme/theme';
+import { NexiTheme } from '../theme';
 
-export const ThemeContext = React.createContext(theme);
+export const ThemeContext = React.createContext(NexiTheme);
 
 const ThemeProvider = props => {
   const { theme, children } = props;
