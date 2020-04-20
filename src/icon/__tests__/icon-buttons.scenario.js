@@ -1,14 +1,15 @@
 import * as React from 'react';
 
-import { Upload } from '../nexi';
-import { APN, SIMCard } from '../mega';
+import { APN as APNNexi, SIMCard as SIMCardNexi } from '../nexi';
+import { APN as APMMega, SIMCard as SIMCardMega } from '../mega';
 
 export default function Scenario() {
   return (
     <div>
-      <Upload />
-      <APN />
-      <SIMCard />
+      <APMMega />
+      <APNNexi />
+      <SIMCardMega />
+      <SIMCardNexi />
     </div>
   );
 }

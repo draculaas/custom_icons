@@ -15,7 +15,7 @@
     "prettier": "prettier --write \"**/*.js\"",
     "storybook": "start-storybook -p 6006 -c storybook",
     "build-storybook": "build-storybook -c storybook -o public/legacy && build-storybook -c storybook",
-    "icon:generate": "node ./src/icon/build-icons.js"
+    "icon:generate": "node ./src/icon/build-icons.js --from nexi/"
   },
   "repository": {
     "type": "git",
@@ -29,28 +29,28 @@
   "homepage": "https://github.com/denisschmidt/custom_icons#readme",
   "dependencies": {
     "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.8.4",
-    "@babel/parser": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/parser": "^7.9.4",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-proposal-export-default-from": "^7.8.3",
-    "@babel/plugin-transform-runtime": "^7.8.3",
-    "@babel/preset-env": "^7.8.4",
-    "@babel/preset-react": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
     "babel-plugin-transform-styletron-display-name": "^1.1.4",
-    "core-js": "^3.6.4",
-    "cross-env": "^7.0.0",
+    "core-js": "^3.6.5",
+    "cross-env": "^7.0.2",
     "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
     "shx": "^0.3.2",
     "storybook-addon-rtl": "^0.2.2",
-    "styled-components": "^5.0.1",
+    "styled-components": "^5.1.0",
     "yargs": "^15.3.1"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.3.13",
-    "@storybook/addon-links": "^5.3.13",
-    "@storybook/addons": "^5.3.13",
-    "@storybook/react": "^5.3.13",
-    "babel-loader": "^8.0.6"
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "babel-loader": "^8.1.0"
   }
 }

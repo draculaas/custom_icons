@@ -25,6 +25,7 @@ function titleCase(str) {
 // transform svg string to properly styled jsx
 function reactify(svgString) {
   return svgString
+    .replace('<?xml version="1.0" encoding="UTF-8"?>', '')
     .replace(/<!--.*-->\n/gm, '')
     .replace(/<\/?svg[^>]*>/gm, '')
     .replace(/^\s*\n/gm, '')
@@ -33,6 +34,7 @@ function reactify(svgString) {
     .replace(/fill-rule/g, 'fillRule')
     .replace(/clip-rule/g, 'clipRule')
     .replace(/fill-opacity/g, 'fillOpacity')
+    .replace(/xlink:href/g, 'xlinkHref')
     .trim();
 }
 
@@ -47,8 +49,8 @@ function cleanOldIcons() {
 
 async function generateNewIcons() {
   const args = require('yargs')
-    .usage('npm run icon:generate --from fixture/init')
-    .example('npm run icon:generate --from fixture/more --no-reset')
+    .usage('node ./src/icon/build-icons.js --from nexi/')
+    .example('node ./src/icon/build-icons.js --from nexi/ --no-reset')
     .demand(['from'])
     .default('reset', true)
     .describe('from', 'file to import').argv;
@@ -65,6 +67,7 @@ async function generateNewIcons() {
   svgs.forEach(async svgFilename => {
     const svgFile = svgFilename.split('.')[0];
     const componentName = pascalCase(svgFile);
+
     iconExports.push(`export {default as ${componentName}} from './${svgFile}.js';`);
 
     const svgFileContents = fs.readFileSync(path.resolve(__dirname, `./${themeType}/svg/${svgFilename}`), 'utf8');
@@ -72,6 +75,7 @@ async function generateNewIcons() {
     const iconProps = [`title="${titleCase(svgFile)}"`];
 
     const viewBox = svgFileContents.match(/viewBox="[^"]+"/);
+
     if (viewBox) {
       iconProps.push(viewBox[0]);
     }

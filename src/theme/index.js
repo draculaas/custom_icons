@@ -1,3 +1,3 @@
-import { NexiTheme } from './nexi-theme';
+import { NexiTheme, nexiThemeColors } from './nexi-theme';
 
-export { NexiTheme };
+export { NexiTheme, nexiThemeColors };
