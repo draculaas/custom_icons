@@ -17,25 +17,15 @@ const TimeBlock = ({ size, ...restProps }) => {
   return (
     <ThemeContext.Consumer>
       {theme => (
-        <Icon title="TimeBlock" viewBox="0 0 16 16" width={ICON_SIZES[size]} height={ICON_SIZES[size]} theme={theme} {...restProps}>
-          <title>Icons / Time block</title>
-          <desc>Created with Sketch.</desc>
-          <defs>
+        <Icon title="TimeBlock" viewBox="0 0 24 24" width={ICON_SIZES[size]} height={ICON_SIZES[size]} theme={theme} {...restProps}>
+          <g id="Icons /  Time block">
             <path
-              d="M12,4.00499688 C16.4172392,4.00499688 19.9950031,7.58276077 19.9950031,12 C19.9950031,16.4172392 16.4172392,19.9950031 12,19.9950031 C7.58276077,19.9950031 4.00499688,16.4172392 4.00499688,12 C4.00499688,7.58276077 7.58276077,4.00499688 12,4.00499688 Z M12,8 C11.45,8 11,8.45 11,9 L11,13 C11,13.28 11.11,13.53 11.29,13.71 L13.29,15.71 C13.47,15.89 13.72,16 14,16 C14.55,16 15,15.55 15,15 C15,14.72 14.89,14.47 14.71,14.29 L13,12.59 L13,9 C13,8.45 12.55,8 12,8 Z"
-              id="path-1"
-            ></path>
-          </defs>
-          <g id="Иконки-CMP" stroke="none" stroke-width="1" fill="none" fillRule="evenodd">
-            <g id="Artboard" transform="translate(-1899.000000, -1955.000000)">
-              <g id="Icons-/--Time-block" transform="translate(1895.000000, 1951.000000)">
-                <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
-                <mask id="mask-2" fill="white">
-                  <use xlinkHref="#path-1"></use>
-                </mask>
-                <use id="error" fill="#D34C4C" fillRule="nonzero" xlinkHref="#path-1"></use>
-              </g>
-            </g>
+              id="error"
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M4.00488 12C4.00488 7.58277 7.58265 4.005 11.9999 4.005C16.4171 4.005 19.9949 7.58277 19.9949 12C19.9949 16.4172 16.4171 19.995 11.9999 19.995C7.58265 19.995 4.00488 16.4172 4.00488 12ZM12.9999 9.00001V12.59L14.7099 14.29C14.8899 14.47 14.9999 14.72 14.9999 15C14.9999 15.55 14.5499 16 13.9999 16C13.7199 16 13.4699 15.89 13.2899 15.71L11.2899 13.71C11.1099 13.53 10.9999 13.28 10.9999 13V9.00001C10.9999 8.45001 11.4499 8.00001 11.9999 8.00001C12.5499 8.00001 12.9999 8.45001 12.9999 9.00001Z"
+              fill="#D34C4C"
+            />
           </g>
         </Icon>
       )}

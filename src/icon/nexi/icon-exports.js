@@ -1,5 +1,4 @@
 export {default as APN} from './APN.js';
-export {default as AccountBlock} from './AccountBlock.js';
 export {default as Active} from './Active.js';
 export {default as Archive} from './Archive.js';
 export {default as ArrowDown} from './ArrowDown.js';
@@ -24,7 +23,7 @@ export {default as Filter} from './Filter.js';
 export {default as Geotag} from './Geotag.js';
 export {default as Hide} from './Hide.js';
 export {default as Import} from './Import.js';
-export {default as Inprogress} from './Inprogress.js';
+export {default as InProgress} from './InProgress.js';
 export {default as Left} from './Left.js';
 export {default as Lock} from './Lock.js';
 export {default as Mail} from './Mail.js';

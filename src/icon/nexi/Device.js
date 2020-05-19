@@ -17,25 +17,15 @@ const Device = ({ size, ...restProps }) => {
   return (
     <ThemeContext.Consumer>
       {theme => (
-        <Icon title="Device" viewBox="0 0 10 16" width={ICON_SIZES[size]} height={ICON_SIZES[size]} theme={theme} {...restProps}>
-          <title>Icons / Device</title>
-          <desc>Created with Sketch.</desc>
-          <defs>
+        <Icon title="Device" viewBox="0 0 24 24" width={ICON_SIZES[size]} height={ICON_SIZES[size]} theme={theme} {...restProps}>
+          <g id="Icons / Device">
             <path
-              d="M16,4 L8,4 C7.45,4 7,4.45 7,5 L7,19 C7,19.55 7.45,20 8,20 L16,20 C16.55,20 17,19.55 17,19 L17,5 C17,4.45 16.55,4 16,4 Z M12,19 C11.45,19 11,18.55 11,18 C11,17.45 11.45,17 12,17 C12.55,17 13,17.45 13,18 C13,18.55 12.55,19 12,19 Z M15,16 L9,16 L9,7 L15,7 L15,16 Z"
-              id="path-1"
-            ></path>
-          </defs>
-          <g id="Иконки-CMP" stroke="none" stroke-width="1" fill="none" fillRule="evenodd">
-            <g id="Artboard" transform="translate(-2102.000000, -1955.000000)">
-              <g id="Icons-/-Device" transform="translate(2095.000000, 1951.000000)">
-                <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
-                <mask id="mask-2" fill="white">
-                  <use xlinkHref="#path-1"></use>
-                </mask>
-                <use id="mobile-phone" fill="#6C808B" fillRule="nonzero" xlinkHref="#path-1"></use>
-              </g>
-            </g>
+              id="mobile-phone"
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M16 4H8C7.45 4 7 4.45 7 5V19C7 19.55 7.45 20 8 20H16C16.55 20 17 19.55 17 19V5C17 4.45 16.55 4 16 4ZM12 19C11.45 19 11 18.55 11 18C11 17.45 11.45 17 12 17C12.55 17 13 17.45 13 18C13 18.55 12.55 19 12 19ZM9 16H15V7H9V16Z"
+              fill="#6C808B"
+            />
           </g>
         </Icon>
       )}

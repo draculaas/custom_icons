@@ -1,6 +1,6 @@
 {
   "name": "react-custom-icons",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Custom icons",
   "main": "index.js",
   "sideEffects": false,

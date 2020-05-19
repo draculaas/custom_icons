@@ -17,25 +17,15 @@ const Download = ({ size, ...restProps }) => {
   return (
     <ThemeContext.Consumer>
       {theme => (
-        <Icon title="Download" viewBox="0 0 16 16" width={ICON_SIZES[size]} height={ICON_SIZES[size]} theme={theme} {...restProps}>
-          <title>Icons / Download</title>
-          <desc>Created with Sketch.</desc>
-          <defs>
+        <Icon title="Download" viewBox="0 0 24 24" width={ICON_SIZES[size]} height={ICON_SIZES[size]} theme={theme} {...restProps}>
+          <g id="Icons / Download">
             <path
-              d="M11.29,15.71 C11.47,15.89 11.72,16 12,16 C12.28,16 12.53,15.89 12.71,15.71 L16.71,11.71 C16.89,11.53 17,11.28 17,11 C17,10.45 16.55,10 16,10 C15.72,10 15.47,10.11 15.29,10.29 L13,12.59 L13,5 C13,4.45 12.55,4 12,4 C11.45,4 11,4.45 11,5 L11,12.59 L8.71,10.29 C8.53,10.11 8.28,10 8,10 C7.45,10 7,10.45 7,11 C7,11.28 7.11,11.53 7.29,11.71 L11.29,15.71 Z M19,15 C18.45,15 18,15.45 18,16 L18,18 L6,18 L6,16 C6,15.45 5.55,15 5,15 C4.45,15 4,15.45 4,16 L4,19 C4,19.55 4.45,20 5,20 L19,20 C19.55,20 20,19.55 20,19 L20,16 C20,15.45 19.55,15 19,15 Z"
-              id="path-1"
-            ></path>
-          </defs>
-          <g id="Иконки-CMP" stroke="none" stroke-width="1" fill="none" fillRule="evenodd">
-            <g id="Artboard" transform="translate(-2179.000000, -1836.000000)">
-              <g id="Icons-/-Download" transform="translate(2175.000000, 1832.000000)">
-                <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
-                <mask id="mask-2" fill="white">
-                  <use xlinkHref="#path-1"></use>
-                </mask>
-                <use id="import" fill="#6C808B" fillRule="nonzero" xlinkHref="#path-1"></use>
-              </g>
-            </g>
+              id="import"
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M12 16C11.72 16 11.47 15.89 11.29 15.71L7.29 11.71C7.11 11.53 7 11.28 7 11C7 10.45 7.45 10 8 10C8.28 10 8.53 10.11 8.71 10.29L11 12.59V5C11 4.45 11.45 4 12 4C12.55 4 13 4.45 13 5V12.59L15.29 10.29C15.47 10.11 15.72 10 16 10C16.55 10 17 10.45 17 11C17 11.28 16.89 11.53 16.71 11.71L12.71 15.71C12.53 15.89 12.28 16 12 16ZM18 16C18 15.45 18.45 15 19 15C19.55 15 20 15.45 20 16V19C20 19.55 19.55 20 19 20H5C4.45 20 4 19.55 4 19V16C4 15.45 4.45 15 5 15C5.55 15 6 15.45 6 16V18H18V16Z"
+              fill="#6C808B"
+            />
           </g>
         </Icon>
       )}

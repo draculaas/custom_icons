@@ -17,25 +17,25 @@ const Import = ({ size, ...restProps }) => {
   return (
     <ThemeContext.Consumer>
       {theme => (
-        <Icon title="Import" viewBox="0 0 16 16" width={ICON_SIZES[size]} height={ICON_SIZES[size]} theme={theme} {...restProps}>
-          <title>Icons / Import</title>
-          <desc>Created with Sketch.</desc>
-          <defs>
+        <Icon title="Import" viewBox="0 0 24 24" width={ICON_SIZES[size]} height={ICON_SIZES[size]} theme={theme} {...restProps}>
+          <g id="Icons / Import">
             <path
-              d="M8,10 C8.28,10 8.53,9.89 8.71,9.71 L11,7.41 L11,15 C11,15.55 11.45,16 12,16 C12.55,16 13,15.55 13,15 L13,7.41 L15.29,9.7 C15.47,9.89 15.72,10 16,10 C16.55,10 17,9.55 17,9 C17,8.72 16.89,8.47 16.71,8.29 L12.71,4.29 C12.53,4.11 12.28,4 12,4 C11.72,4 11.47,4.11 11.29,4.29 L7.29,8.29 C7.11,8.47 7,8.72 7,9 C7,9.55 7.45,10 8,10 Z M19,15 C18.45,15 18,15.45 18,16 L18,18 L6,18 L6,16 C6,15.45 5.55,15 5,15 C4.45,15 4,15.45 4,16 L4,19 C4,19.55 4.45,20 5,20 L19,20 C19.55,20 20,19.55 20,19 L20,16 C20,15.45 19.55,15 19,15 Z"
-              id="path-1"
-            ></path>
-          </defs>
-          <g id="Иконки-CMP" stroke="none" stroke-width="1" fill="none" fillRule="evenodd">
-            <g id="Artboard" transform="translate(-2219.000000, -1835.000000)">
-              <g id="Icons-/-Import" transform="translate(2215.000000, 1831.000000)">
-                <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
-                <mask id="mask-2" fill="white">
-                  <use xlinkHref="#path-1"></use>
-                </mask>
-                <use id="export" fill="#6C808B" fillRule="nonzero" xlinkHref="#path-1"></use>
-              </g>
-            </g>
+              id="export"
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M8.71 9.71C8.53 9.89 8.28 10 8 10C7.45 10 7 9.55 7 9C7 8.72 7.11 8.47 7.29 8.29L11.29 4.29C11.47 4.11 11.72 4 12 4C12.28 4 12.53 4.11 12.71 4.29L16.71 8.29C16.89 8.47 17 8.72 17 9C17 9.55 16.55 10 16 10C15.72 10 15.47 9.89 15.29 9.7L13 7.41V15C13 15.55 12.55 16 12 16C11.45 16 11 15.55 11 15V7.41L8.71 9.71ZM18 16C18 15.45 18.45 15 19 15C19.55 15 20 15.45 20 16V19C20 19.55 19.55 20 19 20H5C4.45 20 4 19.55 4 19V16C4 15.45 4.45 15 5 15C5.55 15 6 15.45 6 16V18H18V16Z"
+              fill="#6C808B"
+            />
+            <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="4" y="4" width="16" height="16">
+              <path
+                id="export_2"
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M8.71 9.71C8.53 9.89 8.28 10 8 10C7.45 10 7 9.55 7 9C7 8.72 7.11 8.47 7.29 8.29L11.29 4.29C11.47 4.11 11.72 4 12 4C12.28 4 12.53 4.11 12.71 4.29L16.71 8.29C16.89 8.47 17 8.72 17 9C17 9.55 16.55 10 16 10C15.72 10 15.47 9.89 15.29 9.7L13 7.41V15C13 15.55 12.55 16 12 16C11.45 16 11 15.55 11 15V7.41L8.71 9.71ZM18 16C18 15.45 18.45 15 19 15C19.55 15 20 15.45 20 16V19C20 19.55 19.55 20 19 20H5C4.45 20 4 19.55 4 19V16C4 15.45 4.45 15 5 15C5.55 15 6 15.45 6 16V18H18V16Z"
+                fill="white"
+              />
+            </mask>
+            <g mask="url(#mask0)"></g>
           </g>
         </Icon>
       )}
