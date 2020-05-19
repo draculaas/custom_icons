@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Upload } from '@react-icons';
+import { Upload } from 'react-custom-icons/icon/mega';
 
 const App = () => {
   return (
