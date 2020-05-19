@@ -2,7 +2,6 @@
   "name": "react-custom-icons",
   "version": "1.0.18",
   "description": "Custom icons",
-  "main": "index.js",
   "sideEffects": false,
   "module": "./esm/index.js",
   "scripts": {
